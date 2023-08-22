@@ -8,5 +8,47 @@ Lilás: #5f2c82
 
 * {
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+body, html {
+    background-color: #5f2c82;
+    height: 100vh; /* Tamanho 100vh, significa 100% da Tela */
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    overflow: hidden;
+
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.822);
+}
+/* Dentro do section login, existe uma div chamada imagem */
+section#login > div#imagem {
+    display: block;
+    background: #5f2c82 url(../imagens/iren-fedo.jpg);
+    background-size: cover;
+    background-position: left top;
+    height: 200px;
+}
+
+section#login > div#formulario{
+    display: block;
+    padding: 15px;
 }
 
