@@ -29,16 +29,14 @@ main {
 section#login {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    overflow: hidden;
-
+    left: 50%;     
+    overflow: hidden;  
     background-color: white;
     width: 250px;
     height: 510px;
     border-radius: 15px; 
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.822);
-
+    transform: translate(-50%, -50%);
     transition: width 1s, height 1s;
 }
 /* Dentro do section login, existe uma div chamada imagem */
@@ -67,8 +65,10 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    display: block;
+    width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;  /*A margin Top e Bottom é 5px e Left e right ficarão com 0px*/
 }
 
@@ -78,7 +78,7 @@ div.campo > label {
 
 div.campo > span {
     color: white;
-    background-color: black;
+    /* background-color: black; */
     font-size: 2em;
     width: 40px;
     padding: 4px;
@@ -87,7 +87,17 @@ div.campo > span {
 div.campo > input {
     background-color: #7ba1a0;
     font-size: 1em;
-    
+    width: calc(100% - 45px);    
+    height: 100%;    
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    /* padding: 4px; NÃO FUNCIONOU  */
+    transform: translateY(-10px);
+}
+/* O campo ficará branco quando o foco estiver no input. */
+div.campo > input:focus-within {
+    background-color: white;
 }
 
 form > input[type=submit] {
@@ -120,6 +130,8 @@ form > a.botao {
     border-radius: 5px;
     text-decoration: none;
 }
+
+
 
 
 
